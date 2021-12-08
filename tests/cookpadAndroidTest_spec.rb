@@ -10,7 +10,7 @@ describe 'Login' do
   before(:all) do
     caps = android_caps
     caps[:caps][:appActivity] = 'com.cookpad.android.app.gateway.GatewayActivity'
-    @driver = Appium::Driver.new(caps, false).start_driver
+    $driver = Appium::Driver.new(caps, false).start_driver
   end
 
   after(:all) do
@@ -18,28 +18,24 @@ describe 'Login' do
   end
 
   it 'via email' do
-    login = Login.new @driver
-    login_email = LoginEmail.new @driver
-    main_nav_bar = MainNavBar.new @driver
-    common = Common.new
 
     # Choose `Login with email`
-    login.login_with_email_button.click
+    Login.login_with_email_button.click
 
     # Enter Username
-    login_email.email_text_field.click
-    login_email.email_text_field.send_keys("testuser1@cookpad.com")
+    Login_Email.email_text_field.click
+    Login_Email.email_text_field.send_keys("testuser1@cookpad.com")
  
     # Enter Password
-    login_email.password_text_field.click
-    login_email.password_text_field.send_keys("artycook")
+    Login_Email.password_text_field.click
+    Login_Email.password_text_field.send_keys("artycook")
 
     # Click 'SignIn'
-    sign_in_button = login_email.sign_in_button
-    common.safe_click(sign_in_button)
+    sign_in_button = Login_Email.sign_in_button
+    Common.safe_click(sign_in_button)
 
     # Assert we are logged in
-    explore_nav_button = main_nav_bar.explore_button
+    explore_nav_button = MainNavBar.explore_button
     expect(explore_nav_button.displayed?).to eql true
   end
 end
