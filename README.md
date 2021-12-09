@@ -9,7 +9,7 @@ Android automation testing using Appium, Ruby, and design pattern Page Object Mo
 Bundler is a dependancy manager for Ruby gems</br>
 
 2. Download bundler (`gem install bundler`)
-3. Install gems (`bundle install`)
+3. Install projects gems (`bundle install`)
 
 ### 💽 Appium Server
 4. Install Appium Server (http://appium.io/)
