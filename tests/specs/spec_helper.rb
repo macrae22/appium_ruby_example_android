@@ -6,9 +6,9 @@ def android_caps
       platformName: 'Android',
       platformVersion: ENV['ANDROID_PLATFORM_VERSION'] || '6.0',
       deviceName: 'emulator-5554',
-      app: '../users/martynmacrae/downloads/cookpad.apk',
+      app: '../apps/apks/cookpad.apk',
       automationName: 'UIAutomator2',
-      appPackage: 'com.mufumbo.android.recipe.search.debug',
+      appPackage: 'com.mufumbo.android.recipe.search',
       appActivity:'com.cookpad.android.app.gateway.GatewayActivity'
     },
     appium_lib: {
