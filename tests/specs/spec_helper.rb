@@ -1,7 +1,5 @@
-# require 'test/unit'
-# extend Test::Unit::Assertions
+require 'appium_lib'
 
-ANDROID_PACKAGE = 'com.mufumbo.android.recipe.search.debug'
 def android_caps
   {
     caps: {
@@ -10,9 +8,11 @@ def android_caps
       deviceName: 'emulator-5554',
       app: '../users/martynmacrae/downloads/cookpad.apk',
       automationName: 'UIAutomator2',
+      appPackage: 'com.mufumbo.android.recipe.search.debug',
+      appActivity:'com.cookpad.android.app.gateway.GatewayActivity'
     },
     appium_lib: {
-      wait: 60
+      wait: 10
     }
   }
 end
@@ -27,7 +27,11 @@ def ios_caps
         automationName: 'XCUITest',
     },
     appium_lib: {
-        wait: 60
+        wait: 10
     }
   }
 end
+
+$driver = Appium::Driver.new(android_caps, true)
+$touch = Appium::TouchAction.new(@driver)
+Appium.promote_appium_methods Object

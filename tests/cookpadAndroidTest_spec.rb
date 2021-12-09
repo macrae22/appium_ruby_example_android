@@ -1,21 +1,9 @@
 require './specs/spec_helper'
+require './hook.rb'
 require './common/common'
-require './screens/login/login.rb'
-require './screens/login/login_email.rb'
-require './screens/login/main_nav_bar.rb'
-require 'appium_lib'
+Dir["./screens/login/*.rb"].each {|file| require file }
 
 describe 'Login' do
-
-  before(:all) do
-    caps = android_caps
-    caps[:caps][:appActivity] = 'com.cookpad.android.app.gateway.GatewayActivity'
-    $driver = Appium::Driver.new(caps, false).start_driver
-  end
-
-  after(:all) do
-    @driver&.quit
-  end
 
   it 'via email' do
 
