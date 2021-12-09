@@ -13,8 +13,9 @@ Bundler is a dependancy manager for Ruby gems</br>
 
 ### 💽 Appium Server
 4. Install Appium Server (http://appium.io/)
+5. Start Appium Server from GUI
 
 ### 🧪 Running tests
-4. Navigate to the projects `tests` directory (`cd tests`)
-5. Run `bundle exec rspec cookpadAndroidTest_spec.rb`
+5. Navigate to the projects `tests` directory (`cd tests`)
+6. Run `bundle exec rspec cookpadAndroidTest_spec.rb`
 
