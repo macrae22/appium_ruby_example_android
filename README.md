@@ -17,5 +17,6 @@ Bundler is a dependancy manager for Ruby gems</br>
 
 ### 🧪 Running tests
 5. Navigate to the projects `tests` directory (`cd tests`)
-6. Run `bundle exec rspec cookpadAndroidTest_spec.rb`
+6. Run `bundle exec rspec cookpadAndroidTest_spec.rb` for a specific test spec
+7. Run `bundle exec rspec *.rb` to run all test specs
 
