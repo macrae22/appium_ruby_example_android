@@ -43,7 +43,7 @@ jobs:
           
       - name: TEMP
         run: |
-          npm audit
+          npm audit fix
         
       - name: Start Appium Server
         run: appium
