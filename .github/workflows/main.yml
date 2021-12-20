@@ -43,6 +43,7 @@ jobs:
           
       - name: TEMP
         run: |
+          npm i --package-lock-only
           npm audit fix
         
       - name: Start Appium Server
