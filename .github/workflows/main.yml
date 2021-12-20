@@ -28,8 +28,8 @@ jobs:
     # Setup Ruby and Bundler
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+       # with:
+         # bundler-cache: true
 
       # Runs a set of commands using the runners shell
       - name: Run UI tests
