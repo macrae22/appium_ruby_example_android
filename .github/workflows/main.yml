@@ -40,6 +40,9 @@ jobs:
       - name: Install Appium Server
         run: |
           npm install -g appium
+          
+      - name: TEMP
+        run: |
           npm audit
         
       - name: Start Appium Server
