@@ -35,5 +35,5 @@ jobs:
       - name: Run UI tests
         run: |
           echo Running UI Tests...
-          cd tests
+          bundler install
           bundle exec rspec *.rb
