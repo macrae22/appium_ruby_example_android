@@ -34,10 +34,14 @@ jobs:
       - name: Install project gems
         run: bundle install
         
+      - name: Install node
+        run: brew install node
+          
       - name: Install Appium Server
-        run: | 
-          brew install node
-          npm install -g appium
+        run: npm install -g appium
+        
+      - name: Start Appium Server
+        run: appium
           
       - name: Run UI tests
         run: |
