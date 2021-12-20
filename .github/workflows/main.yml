@@ -32,8 +32,10 @@ jobs:
          # bundler-cache: true
 
       # Runs a set of commands using the runners shell
+      - name: Install project gems
+        run: bundle install
+          
       - name: Run UI tests
         run: |
-          echo Running UI Tests...
-          bundler install
+          cd tests
           bundle exec rspec *.rb
