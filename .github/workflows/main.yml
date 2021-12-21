@@ -36,11 +36,6 @@ jobs:
           
       - name: Install Appium Server
         run: npm install -g appium
-          
-      - name: TEMP
-        run: |
-          npm i --package-lock-only
-          npm audit fix --force
         
       - name: Start Appium Server
         run: appium
