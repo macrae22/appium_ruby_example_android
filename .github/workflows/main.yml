@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-node@v2.5.0
           
       - name: Install Appium Server
-        uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.5
+        run: npm install -g appium
           
       - name: TEMP
         run: |
