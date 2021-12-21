@@ -31,23 +31,22 @@ jobs:
        # with:
          # bundler-cache: true
          
-      - name: Install project gems
-        run: bundle install
-        
-      - name: Install node
-        run: brew install node
+      - name: Setup node
+        uses: actions/setup-node@v2.5.0
           
       - name: Install Appium Server
-        run: |
-          npm install -g appium
+        uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.5
           
       - name: TEMP
         run: |
           npm i --package-lock-only
-          npm audit fix
+          npm audit fix --force
         
       - name: Start Appium Server
         run: appium
+        
+      - name: Install project gems
+        run: bundle install
           
       - name: Run UI tests
         run: |
