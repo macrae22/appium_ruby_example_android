@@ -37,8 +37,8 @@ jobs:
       - name: Install Appium Server
         run: npm install -g appium
         
-      #- name: Start Appium Server
-      #  run: appium
+      - name: Start Appium Server
+        run: appium --address 127.0.0.1 --port 4723
         
       - name: Install project gems
         run: bundle install
