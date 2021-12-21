@@ -35,7 +35,9 @@ jobs:
         uses: actions/setup-node@v2.5.0
           
       - name: Install Appium Server
-        run: npm install -g appium
+        run: |
+          npm install -g appium
+          appium -v
         
       - name: Start Appium Server
         run: appium --address 127.0.0.1 --port 4723
