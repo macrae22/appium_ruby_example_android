@@ -37,8 +37,8 @@ jobs:
       - name: Install Appium Server
         run: npm install -g appium
         
-      - name: Start Appium Server
-        run: appium
+      #- name: Start Appium Server
+      #  run: appium
         
       - name: Install project gems
         run: bundle install
