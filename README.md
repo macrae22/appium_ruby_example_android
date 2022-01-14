@@ -23,6 +23,22 @@ Bundler is a dependancy manager for Ruby gems</br>
 7. Run `bundle exec rspec *.rb` to run all test specs
 
 -------------------------
+## Test Examples
+There are 4 main examples which I hope will help you.  
+
+**verticalscrolltest**  
+There is a [scroll_to](https://github.com/macrae22/ruby_appium_example/blob/4f2a1faa2641fb50875f5a0067254e0dd01cd6c9/tests/common/common.rb#L13) method which allows you to scroll vertically to an element.
+
+**horizontalscrolltest**
+This test uses a [swipe_to](https://github.com/macrae22/ruby_appium_example/blob/4f2a1faa2641fb50875f5a0067254e0dd01cd6c9/tests/common/common.rb#L39) method which allows you to swipe horizontally to an element.
+
+**deeplinktest**
+Deeplink testing is very straight forward in Appium, check it out.
+
+**logintest**
+This test contains a method _(scenario)_ to login _(essentially extracting out login steps into a method)_
+
+-------------------------
 ## 🤖 CI
 This project is setup to use **Github Actions** and will kick-off all UI tests when a new pull-request is submitted.
 
