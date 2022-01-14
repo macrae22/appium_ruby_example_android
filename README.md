@@ -19,6 +19,23 @@ Bundler is a dependancy manager for Ruby gems</br>
 
 ### 🧪 Running tests
 5. Navigate to the projects `tests` directory (`cd tests`)
-6. Run `bundle exec rspec cookpadAndroidTest_spec.rb` for a specific test spec
+6. Run `bundle exec rspec horizontalscrolltest.rb` for a specific test spec
 7. Run `bundle exec rspec *.rb` to run all test specs
+
+-------------------------
+## 🤖 CI
+This project is setup to use **Github Actions** and will kick-off all UI tests when a new pull-request is submitted.
+
+You can see the CI setup within [main.yml](https://github.com/macrae22/ruby_appium_example/blob/main/.github/workflows/main.yml).
+
+Essentially it does the following:
+* Spins up a **MacOS-11** VM
+* Checkouts the project
+* Installs **Ruby**
+* Sets up **node**
+* Installs **Appium Server**
+* Checks whether **AVD** has been cached _(to save time installing and setting up a new emulator on each run)_
+* Opens an **Android emualtor**
+* Runs tests
+* Generates **testing results report**
 
