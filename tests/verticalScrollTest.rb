@@ -20,5 +20,5 @@ describe 'Guest user can' do
     # Assert we are on the recipe screen
     recipe_title = RecipeView.title_text_view
     expect(recipe_title.displayed?).to eql true
-    end
+  end
 end
