@@ -30,7 +30,7 @@ There are 4 main examples which I hope will help you.
 There is a [scroll_to](https://github.com/macrae22/appium_ruby_example_android/blob/4f2a1faa2641fb50875f5a0067254e0dd01cd6c9/tests/common/common.rb#L13) method which allows you to scroll vertically to an element.
 
 **horizontalscrolltest**
-This test uses a [swipe_to]([https://github.com/macrae22/_example](https://github.com/macrae22/appium_ruby_example_android/blob/4f2a1faa2641fb50875f5a0067254e0dd01cd6c9/tests/common/common.rb#L39) method which allows you to swipe horizontally to an element.
+This test uses a [swipe_to](https://github.com/macrae22/appium_ruby_example_android/blob/4f2a1faa2641fb50875f5a0067254e0dd01cd6c9/tests/common/common.rb#L39) method which allows you to swipe horizontally to an element.
 
 **deeplinktest**
 Deeplink testing is very straight forward in Appium, check it out.
@@ -42,7 +42,7 @@ This test contains a method _(scenario)_ to login _(essentially extracting out l
 ## 🤖 CI
 This project is setup to use **Github Actions** and will kick-off all UI tests when a new pull-request is submitted.
 
-You can see the CI setup within [main.yml]([https://github.com/macrae22/ruby_appium_example](https://github.com/macrae22/appium_ruby_example_android/blob/main/.github/workflows/main.yml).
+You can see the CI setup within [main.yml](https://github.com/macrae22/appium_ruby_example_android/blob/main/.github/workflows/main.yml).
 
 Essentially it does the following:
 * Spins up a **MacOS-11** VM
